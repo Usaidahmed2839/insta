@@ -4,3 +4,4 @@ selenium
 requests
 webdriver-manager
 gnews
+os
