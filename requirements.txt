@@ -3,3 +3,4 @@ cloudinary
 selenium
 requests
 webdriver-manager
+gnews
