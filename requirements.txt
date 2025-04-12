@@ -4,4 +4,3 @@ selenium
 requests
 webdriver-manager
 gnews
-dateutil
