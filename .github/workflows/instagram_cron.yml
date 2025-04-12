@@ -24,4 +24,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run script
-        run: python scraper.py
+        run: |
+          python scraper.py,
+          python googlenews.py
