@@ -1,0 +1,5 @@
+psycopg
+cloudinary
+selenium
+requests
+webdriver-manager
