@@ -132,7 +132,15 @@ def get_latest_instagram_post(page_url):
         for url in candidate_urls:
             driver.get(url)
             time.sleep(5)
-            if driver.find_elements(By.XPATH, "//*[contains(text(), 'Pinned')]"):
+            # if driver.find_elements(By.XPATH, "//*[contains(text(), 'Pinned')]"):
+            #     print(f"🔖 Skipping pinned post: {url}")
+            #     continue
+            is_pinned = False
+            for elem in driver.find_elements(By.XPATH, "//div[contains(text(), 'Pinned')]"):
+                if elem.is_displayed():
+                    is_pinned = True
+                    break
+            if is_pinned:
                 print(f"🔖 Skipping pinned post: {url}")
                 continue
             try:
