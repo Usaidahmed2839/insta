@@ -242,8 +242,8 @@ def scrape_instagram():
 
 # --- Run Forever ---
 # while True:
-  try:
-      scrape_instagram()
-  except Exception as e:
-      print(f"⚠️ Unexpected error in main loop: {e}")
+try:
+    scrape_instagram()
+except Exception as e:
+    print(f"⚠️ Unexpected error in main loop: {e}")
     # time.sleep(60 * 20)  # Run every 20 minutes
