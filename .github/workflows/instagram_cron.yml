@@ -25,5 +25,5 @@ jobs:
 
       - name: Run script
         run: |
-          python scraper.py,
+          python scraper.py
           python googlenews.py
