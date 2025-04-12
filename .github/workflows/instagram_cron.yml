@@ -30,4 +30,5 @@ jobs:
           # python googlenews.py
           # python fb.py
           # python rssfeed.py
-          python fbtime.py
+          # python fbtime.py
+          trends.py
