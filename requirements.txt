@@ -6,3 +6,4 @@ webdriver-manager
 gnews
 python-dateutil
 pandas
+tabulate
