@@ -28,4 +28,4 @@ jobs:
           # python scraper.py
           # python googlenews.py
           # python fb.py
-          python rss.py
+          python rssfeed.py
