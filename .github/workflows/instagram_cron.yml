@@ -26,4 +26,5 @@ jobs:
       - name: Run script
         run: |
           python scraper.py
-          python googlenews.py
+          # python googlenews.py
+          python fb.py
