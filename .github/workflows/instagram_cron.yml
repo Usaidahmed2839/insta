@@ -31,4 +31,4 @@ jobs:
           # python fb.py
           # python rssfeed.py
           # python fbtime.py
-          trends.py
+          python trends.py
