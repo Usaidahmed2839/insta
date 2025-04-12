@@ -26,9 +26,9 @@ jobs:
 
       - name: Run script
         run: |
-          # python scraper.py
-          # python googlenews.py
-          # python fb.py
-          # python rssfeed.py
-          # python fbtime.py
+          python scraper.py
+          python googlenews.py
+          python fb.py
+          python rssfeed.py
+          python fbtime.py
           python trends.py
