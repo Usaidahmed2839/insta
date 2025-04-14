@@ -28,7 +28,7 @@ jobs:
         run: |
           # python scraper.py
           # python googlenews.py
-          python fb.py
+          # python fb.py
           # python rssfeed.py
           # python fbtime.py
           # python trends.py
