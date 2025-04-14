@@ -31,7 +31,7 @@ def load_proxies(file_path):
 
 
 def get_webdriver_with_proxy():
-    proxies = load_proxies("D:/scrapping/proxy_list.csv")
+    proxies = load_proxies("proxy_list.csv")
     if not proxies:
         raise Exception("No proxies available.")
     proxy = random.choice(proxies)
