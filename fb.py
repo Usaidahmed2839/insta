@@ -110,7 +110,7 @@ def get_facebook_posts(page_name, url):
             new_posts.append({"page_name": page_name, "link": normalize_url(full_link)})
             print("new post found:", normalize_url(full_link))    
     if not new_posts:
-        print("no new post found")
+        print("no new post found", page_name)
     return new_posts[:1] if new_posts else []
 
 
