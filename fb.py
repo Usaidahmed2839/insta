@@ -94,7 +94,11 @@ def get_facebook_posts(page_name, url):
     options.add_argument("--headless")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get(url)
-    time.sleep(20)
+    #new changing
+    for _ in range(3):  # Scroll down 3 times
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(5)
+        ----------------
     soup = BeautifulSoup(driver.page_source, "html.parser")
     driver.quit()
     posts = soup.find_all("a", href=True)
@@ -104,7 +108,7 @@ def get_facebook_posts(page_name, url):
         if any(pattern in href for pattern in ["/posts/", "/reels/"]):
             full_link = href #"https://www.facebook.com" + 
             new_posts.append({"page_name": page_name, "link": normalize_url(full_link)})
-            print("new post found:", normalize_url)    
+            print("new post found:", normalize_url(full_link))    
     if not new_posts:
         print("no new post found")
     return new_posts[:1] if new_posts else []
