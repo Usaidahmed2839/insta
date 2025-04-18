@@ -94,7 +94,7 @@ def get_facebook_posts(page_name, url):
     options.add_argument("--headless")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get(url)
-    time.sleep(5)
+    time.sleep(15)
     soup = BeautifulSoup(driver.page_source, "html.parser")
     driver.quit()
     posts = soup.find_all("a", href=True)
