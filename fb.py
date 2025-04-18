@@ -104,9 +104,9 @@ def get_facebook_posts(page_name, url):
         if any(pattern in href for pattern in ["/posts/", "/reels/"]):
             full_link = href #"https://www.facebook.com" + 
             new_posts.append({"page_name": page_name, "link": normalize_url(full_link)})
-            print("new post found:", full_link)    
-        else:
-            print("no new post found")
+            print("new post found:", post["link")    
+    if not new_post:
+        print("no new post found")
     return new_posts[:1] if new_posts else []
 
 
