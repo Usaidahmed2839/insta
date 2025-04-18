@@ -97,7 +97,7 @@ def get_facebook_posts(page_name, url):
     #-------new changing
     for _ in range(3):  # Scroll down 3 times
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(5)
+        time.sleep(10)
     # ----------------
     soup = BeautifulSoup(driver.page_source, "html.parser")
     driver.quit()
@@ -105,7 +105,7 @@ def get_facebook_posts(page_name, url):
     new_posts = []
     for post in posts:
         href = post['href']
-        if any(pattern in href for pattern in ["/posts/", "/reels/"]):
+        if any(pattern in href for pattern in ["/posts/", "/reels/","/videos/","/video/"]):
             full_link = href #"https://www.facebook.com" + 
             new_posts.append({"page_name": page_name, "link": normalize_url(full_link)})
             print("new post found:", normalize_url(full_link))    
