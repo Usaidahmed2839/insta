@@ -1,4 +1,4 @@
-name: Run Instagram Scraper Hourly
+name: Run all Scraper Hourly
 
 on:
   schedule:
