@@ -90,7 +90,7 @@ def normalize_url(url):
     return f"{parsed_url.scheme}://www.{netloc}{parsed_url.path}"
 
 def get_facebook_posts(page_name, url):
-    # options = Options()
+    options = Options()
     options.add_argument("--headless")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get(url)
