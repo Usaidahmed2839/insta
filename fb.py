@@ -28,12 +28,12 @@ options.add_argument(
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Mobile Safari/537.36"
 )
 
-# chrome_bin = os.getenv("CHROME_BIN", "/usr/bin/chromium-browser")  # Default to Chromium
-# options.binary_location = chrome_bin
+chrome_bin = os.getenv("CHROME_BIN", "/usr/bin/chromium-browser")  # Default to Chromium
+options.binary_location = chrome_bin
 
-# # Detect Chromedriver
-# chromedriver_path = os.getenv("CHROMEDRIVER_BIN", "/usr/bin/chromedriver")
-# service = Service(chromedriver_path)
+# Detect Chromedriver
+chromedriver_path = os.getenv("CHROMEDRIVER_BIN", "/usr/bin/chromedriver")
+service = Service(chromedriver_path)
 
 #  --- Facebook Scraper ---
 facebook_pages = [
